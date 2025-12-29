@@ -54,3 +54,21 @@ function deleteProduct(index) {
   saveProducts(products);
   loadProducts();
 }
+function loadOrders() {
+  const list = document.getElementById("orderList");
+  if (!list) return;
+
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  list.innerHTML = "";
+
+  orders.forEach(order => {
+    list.innerHTML += `
+      <li>
+        <strong>#${order.id}</strong><br>
+        ${order.date}<br>
+        Toplam: ${order.total}₺
+      </li>
+      <hr>
+    `;
+  });
+}
