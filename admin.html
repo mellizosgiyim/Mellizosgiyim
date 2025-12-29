@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mellizos Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>🔐 Mellizos Admin Panel</h2>
+
+<div id="login">
+  <input type="text" id="username" placeholder="Kullanıcı adı">
+  <input type="password" id="password" placeholder="Şifre">
+  <button onclick="login()">Giriş Yap</button>
+</div>
+
+<div id="panel" style="display:none;">
+  <h3>➕ Ürün Ekle</h3>
+  <input type="text" id="name" placeholder="Ürün adı">
+  <input type="number" id="price" placeholder="Fiyat">
+  <input type="text" id="image" placeholder="Resim linki">
+  <button onclick="addProduct()">Ekle</button>
+
+  <h3>📦 Ürünler</h3>
+  <ul id="productList"></ul>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
