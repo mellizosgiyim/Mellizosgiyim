@@ -2,6 +2,7 @@ const USER = "admin";
 const PASS = "1234";
 
 function login() {
+  loadOrders();
   const u = document.getElementById("username").value;
   const p = document.getElementById("password").value;
 
